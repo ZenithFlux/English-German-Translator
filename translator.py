@@ -7,6 +7,7 @@ class EN2GE:
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-de")
         self.model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-de").to(DEVICE)
+        print("Running on", DEVICE.upper())
         
     def translate(self, text: str):
         inputs = self.tokenizer(text, return_tensors="pt")
