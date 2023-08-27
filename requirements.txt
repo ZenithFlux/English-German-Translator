@@ -1,0 +1,6 @@
+torch==2.0.1+cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+transformers==4.32.0
+streamlit==1.26.0
+sentencepiece==0.1.99
